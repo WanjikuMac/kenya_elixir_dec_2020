@@ -5,7 +5,7 @@ defmodule GwijiWeb.CounterLive do
   # constructor
   def mount(_params, _session, %{assigns: assigns}=socket) do
     board = Board.new()
-    {:ok, assign(socket, count: 0, board: board, status: Board.check(board))}
+    {:ok, assign(socket, count: 0, board: board, status: Board.check(board).status)}
   end
   
   # converter
